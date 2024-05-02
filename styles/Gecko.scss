@@ -321,8 +321,35 @@
                 }
             }
         }
+        .sub-nav {
+            ul {
+                top: 16px;
+            }
+            li {
+                margin-bottom: 1px;
+                a {
+                    color: #475569;
+                    position: relative;
+                    &.active,
+                    &:hover {
+                        background-color: #f8fafc;
+                        color: #172554;
+                    }
+                    &.active {
+                        &:before {
+                            content: "";
+                            height: 24px;
+                            width: 4px;
+                            background: #2563eb;
+                            border-radius: 0 4px 4px 0;
+                            left: -16px;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
     }
-
 }
 
 }
