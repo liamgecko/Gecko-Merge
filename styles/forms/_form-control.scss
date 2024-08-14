@@ -297,3 +297,20 @@ textarea {
     }
   }
 }
+
+.input-btn {
+  .form-control {
+    padding-right: 78px;
+  }
+  .input-btns {
+    right: $spacer * 2;
+    .btn {
+      padding: 2px;
+      color: $grey-400;
+      &:hover {
+        color: $primary;
+        background: none;
+      }
+    }
+  }
+}

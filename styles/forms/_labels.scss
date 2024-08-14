@@ -12,6 +12,7 @@
     cursor: pointer;
     border: 1px solid $input-border-color;
     width: 360px;
+    height: 70px;
     @include transition();
     &:hover {
       border-color: $input-hover-border-color;
@@ -30,6 +31,10 @@
       border-color: $blue-500;
       background-color: $blue-25;
     }
+  }
+
+  .required {
+    color: $red-500;
   }
 }
 

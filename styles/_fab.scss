@@ -1,0 +1,26 @@
+.fab {
+    background-color: $fab-bg;
+    color: $fab-color;
+    border: $fab-border;
+    width: $fab-width;
+    height: $fab-height;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $fab-hover-bg;
+        color: $fab-hover-color;
+        border: $fab-hover-border;
+    }
+
+    &:focus-visible {
+        background-color: $fab-focus-bg;
+        color: $fab-focus-color;
+        outline: $fab-focus-border;
+        outline-offset: -3px;
+    }
+
+    > svg {
+        font-size: $fab-icon-size;
+    }
+
+}

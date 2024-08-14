@@ -38,7 +38,7 @@
             .avatar-body {
                 &:after {
                     content: "";
-                    background-color: change-color($color: $primary, $alpha: 0.5);
+                    background-color: change-color($color: $primary, $alpha: 0.25);
                 }
                 img {
                     filter: grayscale(100);

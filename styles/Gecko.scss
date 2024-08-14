@@ -82,7 +82,7 @@
     padding-left: 64px;
 
     .panel {
-        height: 100vh;
+        height: calc(100vh - 49px);
         .panel-heading {
             height: 60px;
         }
@@ -152,22 +152,6 @@
         .conversation-messages-container {
             height: calc(100% - 230px);
             overflow-y: auto;
-            .conversation-message-content {
-                line-height: 1.3;
-            }
-            .conversation-message {
-                &:last-child {
-                    margin-bottom: 0 !important;
-                }
-                .conversation-message-content {
-                    border-radius: 0 6px 6px 6px;
-                }
-                &.agent {
-                    .conversation-message-content {
-                        border-radius: 6px 0 6px 6px;
-                    } 
-                }
-            }
         }
 
         .reply-box {
@@ -425,6 +409,25 @@
         }
         .category-icon {
             width: 18px;
+        }
+    }
+}
+
+.chat-filters {
+    .chat-filters-nav {
+        @media only screen and (min-width: 1281px) {
+            display: block;
+        }
+        @media only screen and (max-width: 1280px) {
+            display: none;
+        }
+    }
+    .chat-filters-dropdown {
+        @media only screen and (min-width: 1281px) {
+            display: none;
+        }
+        @media only screen and (max-width: 1280px) {
+            display: block;
         }
     }
 }

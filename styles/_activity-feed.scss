@@ -1,0 +1,24 @@
+.activity-feed {
+  li {
+      &:before {
+          content: "";
+          width: 0px;
+          height: 100%;
+          left: 11px;
+          position: absolute;
+          top: 0;
+          z-index: 0;
+          border: $activity-feed-border;
+      }
+      &:last-child {
+          &::before {
+              display: none;
+          }
+      }
+  }
+  .activity-feed-icon {
+      height: $activity-feed-icon-height;
+      width: $activity-feed-icon-width;
+      z-index: 1;
+  }
+}

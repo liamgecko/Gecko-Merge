@@ -1,0 +1,37 @@
+.reply-box {
+    background-color: $replybox-bg;
+    .reply-box-body {
+        textarea {
+            appearance: none;
+            resize: none;
+            field-sizing: content;
+            max-height: 200px;
+            &:focus,
+            &:focus-visible {
+                border-color: transparent;
+                box-shadow: none;
+            }
+        }
+        &.reply-box-simple {
+            .reply-box-controls {
+                padding-right: $spacer;
+            }
+        }
+    }
+    &.note-mode {
+        background-color: $replybox-note-bg;
+        .reply-box-body {
+            textarea {
+                background-color: $replybox-note-bg;
+            }
+        }
+        .btn {
+            &-naked-primary {
+                &:hover {
+                    background-color: $replybox-footer-icon-hover-bg;
+                    color: $replybox-footer-icon-hover-color;
+                }
+            }
+        }
+    }
+}

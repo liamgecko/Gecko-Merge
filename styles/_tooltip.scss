@@ -129,10 +129,13 @@
 
     &:before {
       right: 0;
+      border-right-color: $white;
     }
   }
   .tooltip-inner {
     padding: 12px;
+    background-color: $white;
+    color: $primary;
   }
 
 }

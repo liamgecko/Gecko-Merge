@@ -77,8 +77,8 @@ $blue-25:  #EFF6FF !default;
 $blue-50:  #DBEAFE !default;
 $blue-100: #BFDBFE !default;
 $blue-200: #93C5FD !default;
-$blue-300: #60A5FA !default;
-$blue-400: #3B82F6 !default;
+$blue-300: #5293FF !default;
+$blue-400: #0F6AFF !default;
 $blue-500: #2563EB !default;
 $blue-600: #1D4ED8 !default;
 $blue-700: #1E40AF !default;
@@ -89,7 +89,7 @@ $red-25:  #FFF1F2 !default;
 $red-50:  #FFE4E6 !default;
 $red-100: #FECDD3 !default;
 $red-200: #FDA4AF !default;
-$red-300: #FB7185 !default;
+$red-300: #F6657E !default;
 $red-400: #F43F5E !default;
 $red-500: #E11D48 !default;
 $red-600: #BE123C !default;
@@ -109,17 +109,17 @@ $orange-700: #9A3412 !default;
 $orange-800: #7C2D12 !default;
 $orange-900: #431407 !default;
 
-$green-25:  #F0FDF4 !default;
-$green-50:  #DCFCE7 !default;
-$green-100: #BBF7D0 !default;
-$green-200: #86EFAC !default;
-$green-300: #4ADE80 !default;
-$green-400: #22C55E !default;
-$green-500: #16A34A !default;
-$green-600: #15803D !default;
-$green-700: #166534 !default;
-$green-800: #14532D !default;
-$green-900: #052E16 !default;
+$green-25:  #E5FFF0 !default;
+$green-50:  #CCFFE1 !default;
+$green-100: #BDFFD7 !default;
+$green-200: #8FFFC2 !default;
+$green-300: #47EBA1 !default;
+$green-400: #15C182 !default;
+$green-500: #03875F !default;
+$green-600: #006B55 !default;
+$green-700: #034F42 !default;
+$green-800: #053832 !default;
+$green-900: #072726 !default;
 
 $yellow-25:  #FEFCE8 !default;
 $yellow-50:  #FEF9C3 !default;
@@ -138,9 +138,9 @@ $purple-50:  #F3E8FF !default;
 $purple-100: #E9D5FF !default;
 $purple-200: #D8B4FE !default;
 $purple-300: #C084FC !default;
-$purple-400: #A855F7 !default;
-$purple-500: #9333EA !default;
-$purple-600: #7E22CE !default;
+$purple-400: #A042FA !default;
+$purple-500: #8921E8 !default;
+$purple-600: #7410C6 !default;
 $purple-700: #6B21A8 !default;
 $purple-800: #581C87 !default;
 $purple-900: #3B0764 !default;
@@ -381,7 +381,7 @@ $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+$enable-negative-margins:     true !default;
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -540,6 +540,7 @@ $border-radius:               4px !default;
 $border-radius-sm:            2px !default;
 $border-radius-lg:            8px !default;
 $border-radius-xl:            12px !default;
+$border-radius-2xl:           16px !default;
 $border-radius-pill:          50rem !default;
 $border-rounded:              9999px !default;
 // scss-docs-end border-radius-variables
@@ -561,7 +562,7 @@ $component-active-bg:         $primary !default;
 // scss-docs-start caret-variables
 $caret-width:                 .3em !default;
 $caret-vertical-align:        0 !default;
-$caret-spacing:               $spacer / 2 !default;
+$caret-spacing:               $spacer * 0.5 !default;
 // scss-docs-end caret-variables
 
 $transition-base:             all .15s ease-in-out !default;
@@ -597,12 +598,12 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
-$font-size-root:              null !default;
+$font-size-root:              14px !default;
 $font-size-base:              1rem !default; // 14px
 
-$font-size-3xs:               $font-size-base * .571 !default; // 8px
-$font-size-2xs:               $font-size-base * .714 !default; // 10px
-$font-size-xs:                $font-size-base * .857 !default; // 12px
+$font-size-3xs:               $font-size-base * .643 !default; // 9px
+$font-size-2xs:               $font-size-base * .786 !default; // 11px
+$font-size-xs:                $font-size-base * .929 !default; // 13px
 $font-size-sm:                $font-size-base !default; // 14px
 $font-size-md:                $font-size-base * 1.143 !default; // 16px
 $font-size-lg:                $font-size-base * 1.286 !default; // 18px
@@ -624,6 +625,8 @@ $font-weight-base:            $font-weight-normal !default;
 
 $font-letter-spacing:         -0.02rem !default;
 
+$font-feature-setting:        "salt" !default;
+
 $line-height-base:            1.3 !default;
 $line-height-sm:              1.2 !default;
 $line-height-lg:              2 !default;
@@ -632,8 +635,8 @@ $h1-font-size:                $display-size-xs !default;
 $h2-font-size:                $font-size-lg !default;
 $h3-font-size:                $font-size-md !default;
 $h4-font-size:                $font-size-base !default;
-$h5-font-size:                $font-size-sm !default;
-$h6-font-size:                $font-size-xs !default;
+$h5-font-size:                $font-size-xs !default;
+$h6-font-size:                $font-size-2xs !default;
 
 $icon-size-base:              $font-size-sm; // 14px
 
@@ -714,7 +717,7 @@ $blockquote-font-size:        $font-size-base * 1.25 !default;
 $blockquote-footer-color:     $grey-900 !default;
 $blockquote-footer-font-size: $small-font-size !default;
 
-$hr-margin-y:                 $spacer / 2 !default;
+$hr-margin-y:                 $spacer * 0.5 !default;
 $hr-color:                    inherit !default;
 
 // fusv-disable
@@ -748,9 +751,9 @@ $table-cell-padding-y:        $spacer * 2 !default;
 $table-cell-padding-x:        $table-cell-padding-y !default;
 $table-cell-padding:          $spacer * 2;
 $table-cell-padding-left:     $spacer * 2; 
-$table-cell-padding-y-sm:     $spacer !default;
+$table-cell-padding-y-sm:     calc($spacer * 0.5) !default;
 $table-cell-padding-x-sm:     $table-cell-padding-y-sm !default;
-$table-header-cell-padding:   $table-cell-padding-y-sm $table-cell-padding-x !default;
+$table-header-cell-padding:   $spacer $spacer * 2 !default;
 
 $table-cell-vertical-align:   top !default;
 
@@ -814,7 +817,7 @@ $input-btn-padding-y:         $spacer !default;
 $input-btn-padding-x:         $spacer * 1.5 !default;
 $input-btn-font-family:       $font-family-base !default;
 $input-btn-font-size:         $font-size-base !default;
-$input-btn-line-height:       1.3 !default;
+$input-btn-line-height:       1.286 !default;
 
 $input-btn-focus-width:         .25rem !default;
 $input-btn-focus-color-opacity: 1 !default;
@@ -822,13 +825,15 @@ $input-btn-focus-color:         rgba($component-active-bg, .25) !default;
 $input-btn-focus-blur:          0 !default;
 $input-btn-focus-box-shadow:    0 0 $input-btn-focus-blur $input-btn-focus-width $input-btn-focus-color !default;
 
-$input-btn-padding-y-sm:      $spacer * 0.85 !default;
+$input-btn-padding-y-sm:      $spacer * 0.75 !default;
 $input-btn-padding-x-sm:      $spacer !default;
 $input-btn-font-size-sm:      $font-size-base !default;
+$input-btn-line-height-sm:       1.3334 !default;
 
 $input-btn-padding-y-lg:      $spacer * 1.25 !default;
 $input-btn-padding-x-lg:      $spacer * 1.5 !default;
 $input-btn-font-size-lg:      $font-size-base !default;
+$input-btn-line-height-lg:       1.286 !default;
 
 $input-btn-border-width:      $border-width !default;
 // scss-docs-end input-btn-variables
@@ -849,10 +854,12 @@ $btn-white-space:             null !default; // Set to `nowrap` to prevent text 
 $btn-padding-y-sm:            $input-btn-padding-y-sm !default;
 $btn-padding-x-sm:            $input-btn-padding-x-sm !default;
 $btn-font-size-sm:            $font-size-xs !default;
+$btn-line-height-sm:          $input-btn-line-height-sm !default;
 
 $btn-padding-y-lg:            $input-btn-padding-y-lg !default;
 $btn-padding-x-lg:            $input-btn-padding-x-lg !default;
 $btn-font-size-lg:            $input-btn-font-size-lg !default;
+$btn-line-height-lg:          $input-btn-line-height-lg !default;
 
 $btn-border-width:            $input-btn-border-width !default;
 
@@ -914,9 +921,9 @@ $btn-danger-hover-border:         $btn-danger-hover-bg;
 $btn-danger-active-bg:            $btn-danger-hover-bg;
 $btn-danger-active-border:        $btn-danger-active-bg;
 $btn-danger-active-color:         $white;
-$btn-danger-disabled-bg:          $red-100;
-$btn-danger-disabled-border:      $btn-danger-disabled-bg;
-$btn-danger-disabled-color:       $btn-danger-color;
+$btn-danger-disabled-bg:          $btn-secondary-disabled-bg;
+$btn-danger-disabled-border:      $btn-secondary-disabled-border;
+$btn-danger-disabled-color:       $btn-secondary-disabled-color;
 $btn-danger-focus-box-shadow:     0 0 0 0.071429rem rgba($red-500, 100%);
 
 // Naked Primary btn
@@ -938,46 +945,39 @@ $btn-naked-primary-focus-box-shadow:      $btn-secondary-focus-box-shadow;
 $btn-naked-danger-bg:                    transparent;
 $btn-naked-danger-color:                 $primary;
 $btn-naked-danger-border:                1px solid $btn-naked-primary-bg;
-
 $btn-naked-danger-hover-bg:              $red-25;
 $btn-naked-danger-hover-color:           $red-600;
 $btn-naked-danger-hover-border:          $btn-danger-hover-bg;
-
 $btn-naked-danger-active-bg:             $btn-naked-danger-hover-bg;
 $btn-naked-danger-active-color:          $btn-naked-danger-hover-color;
 $btn-naked-danger-active-border:         $red-600;
-
-$btn-naked-danger-disabled-bg:           $btn-danger-disabled-bg;
-$btn-naked-danger-disabled-color:        $btn-danger-disabled-color;
-$btn-naked-danger-disabled-border:       $btn-danger-disabled-border;
+$btn-naked-danger-disabled-bg:           $btn-secondary-disabled-bg;
+$btn-naked-danger-disabled-color:        $btn-secondary-disabled-color;
+$btn-naked-danger-disabled-border:       $btn-secondary-disabled-border;
 $btn-naked-danger-focus-box-shadow:      $btn-danger-focus-box-shadow;
 
-// Outline btn
-$btn-outline-bg:                  $white;
-$btn-outline-color:               $primary;
-$btn-outline-border:              $border-color;
-$btn-outline-hover-bg:            $btn-naked-primary-hover-bg;
-$btn-outline-hover-color:         $blue-500;
-$btn-outline-hover-border:        $blue-500;
-$btn-outline-active-bg:           $btn-naked-primary-active-bg;
-$btn-outline-active-border:       $btn-naked-primary-active-border;
-$btn-outline-active-color:        $btn-naked-primary-active-color;
-$btn-outline-disabled-bg:         $btn-secondary-disabled-bg;
-$btn-outline-disabled-border:     $btn-naked-primary-disabled-bg;
-$btn-outline-disabled-color:      $btn-naked-primary-disabled-color;
-$btn-outline-disabled-border:     transparent;
-$btn-outline-focus-box-shadow:    $btn-naked-primary-focus-box-shadow;
+// Outline primary btn
+$btn-outline-primary-bg:                  $white;
+$btn-outline-primary-color:               $primary;
+$btn-outline-primary-border:              $border-color;
+$btn-outline-primary-hover-bg:            $btn-naked-primary-hover-bg;
+$btn-outline-primary-hover-color:         $blue-500;
+$btn-outline-primary-hover-border:        $blue-500;
+$btn-outline-primary-active-bg:           $btn-naked-primary-active-bg;
+$btn-outline-primary-active-border:       $btn-naked-primary-active-border;
+$btn-outline-primary-active-color:        $btn-naked-primary-active-color;
+$btn-outline-primary-disabled-bg:         $btn-secondary-disabled-bg;
+$btn-outline-primary-disabled-border:     $btn-naked-primary-disabled-bg;
+$btn-outline-primary-disabled-color:      $btn-naked-primary-disabled-color;
+$btn-outline-primary-disabled-border:     transparent;
+$btn-outline-primary-focus-box-shadow:    $btn-naked-primary-focus-box-shadow;
 
-$btn-icon-right-margin:           $spacer / 2;
-$btn-icon-left-margin:            $btn-icon-right-margin;
-$btn-sm-icon-right-margin:        $btn-icon-right-margin;
-$btn-sm-icon-left-margin:         $btn-sm-icon-right-margin;
-
+// Outline danger btn
 $btn-outline-danger-bg:                  $white;
 $btn-outline-danger-color:               $primary;
 $btn-outline-danger-border:              $border-color;
-$btn-outline-danger-hover-bg:            $red-25;
-$btn-outline-danger-hover-color:         $red-600;
+$btn-outline-danger-hover-bg:            $btn-naked-danger-hover-bg;
+$btn-outline-danger-hover-color:         $btn-naked-danger-hover-color;
 $btn-outline-danger-hover-border:        $red-600;
 $btn-outline-danger-active-bg:           $btn-outline-danger-hover-bg;
 $btn-outline-danger-active-border:       $btn-outline-danger-hover-border;
@@ -987,6 +987,41 @@ $btn-outline-danger-disabled-border:     $btn-naked-primary-disabled-bg;
 $btn-outline-danger-disabled-color:      $btn-naked-primary-disabled-color;
 $btn-outline-danger-disabled-border:     transparent;
 $btn-outline-danger-focus-box-shadow:    $btn-naked-danger-focus-box-shadow;
+
+// Dark btn
+$btn-dark-bg:                  $grey-600;
+$btn-dark-color:               $grey-25;
+$btn-dark-border:              1px solid $btn-dark-bg;
+$btn-dark-hover-bg:            $grey-800;
+$btn-dark-hover-color:         $white;
+$btn-dark-hover-border-color:  $btn-dark-hover-bg;
+$btn-dark-active-bg:           $btn-dark-hover-bg;
+$btn-dark-active-color:        $btn-dark-color;
+$btn-dark-active-border:       $btn-dark-active-bg;
+$btn-dark-disabled-bg:         $grey-300;
+$btn-dark-disabled-color:      $white;
+$btn-dark-disabled-border:     $grey-600;
+$btn-dark-focus-box-shadow:    0 0 0 0.071429rem rgba($blue-500, 100%);
+
+// Light btn
+$btn-light-bg:                  $grey-25;
+$btn-light-color:               $primary;
+$btn-light-border:              1px solid $btn-light-bg;
+$btn-light-hover-bg:            $grey-100;
+$btn-light-hover-color:         $white;
+$btn-light-hover-border-color:  $btn-light-hover-bg;
+$btn-light-active-bg:           $btn-light-hover-bg;
+$btn-light-active-color:        $btn-light-color;
+$btn-light-active-border:       $grey-300;
+$btn-light-disabled-bg:         $grey-25;
+$btn-light-disabled-color:      $grey-400;
+$btn-light-disabled-border:     $grey-600;
+$btn-light-focus-box-shadow:    0 0 0 0.071429rem rgba($blue-500, 100%);
+
+$btn-icon-right-margin:           calc($spacer * 0.5);
+$btn-icon-left-margin:            $btn-icon-right-margin;
+$btn-sm-icon-right-margin:        $btn-icon-right-margin;
+$btn-sm-icon-left-margin:         $btn-sm-icon-right-margin;
 
 // Button group
 $btn-group-bg:                      $white;
@@ -1058,7 +1093,7 @@ $btn-split-naked-disabled-border-color:       $btn-naked-primary-disabled-border
 
 // Forms
 
-$form-group-margin:                     $spacer * 2;
+$form-group-margin:                     $spacer * 3;
 
 // scss-docs-start form-text-variables
 $form-text-margin-top:                  .25rem !default;
@@ -1368,7 +1403,7 @@ $nav-link-padding-y:                0.57143rem !default;
 $nav-link-padding-x:                1.1429rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-color:                    $primary !default;
-$nav-link-hover-color:              $blue-500 !default;
+$nav-link-hover-color:              $grey-600 !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-font-weight:              $font-weight-medium !default;
 $nav-link-disabled-color:           $grey-900 !default;
@@ -1561,6 +1596,7 @@ $placeholder-opacity-min:           .2 !default;
 // scss-docs-start card-variables
 $card-spacer-y:                     $spacer * 2 !default;
 $card-spacer-x:                     $spacer * 2 !default;
+$card-margin:                       $spacer * 3;
 $card-title-spacer-y:               $spacer * .5 !default;
 $card-border-width:                 $border-width !default;
 $card-border-color:                 $grey-100 !default;
@@ -1578,9 +1614,10 @@ $card-bg:                           $white !default;
 $card-img-overlay-padding:          $spacer !default;
 $card-group-margin:                 $grid-gutter-width * .5 !default;
 $card-sub-title-size:               $h3-font-size;
-$card-header-size:                  $font-size-base * 1.1428;
+$card-header-size:                  $font-size-md;
 $card-header-color:                 $primary;
 $card-header-font-weight:           $font-weight-semibold;
+$card-header-icon-spacer:           $spacer;
 $card-footer-btn-spacer:            $spacer;
 
 $card-container-flex:               flex;
@@ -1592,11 +1629,11 @@ $card-container-header-spacing:     $spacer;
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     1rem !default;
-$accordion-padding-x:                     0 !default;
+$accordion-padding-y:                     $spacer * 2 !default;
+$accordion-padding-x:                     $spacer * 2 !default;
 $accordion-color:                         $body-color !default; // Sass variable because of $accordion-button-icon
 $accordion-font-weight:                   $font-weight-semibold;
-$accordion-bg:                            $white !default;
+$accordion-bg:                            transparent !default;
 $accordion-border-width:                  $border-width !default;
 $accordion-border-color:                  $border-color !default;
 $accordion-border-radius:                 $border-radius !default;
@@ -1616,20 +1653,21 @@ $accordion-button-active-color:           $accordion-color !default;
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 
-$accordion-icon-width:                    1rem * .85714 !default;
+$accordion-icon-width:                    16px !default;
 $accordion-icon-color:                    $accordion-button-color !default;
 $accordion-icon-active-color:             $accordion-button-active-color !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
-$accordion-icon-transform:                rotate(-180deg) !default;
+$accordion-icon-transform:                rotate(-90deg) !default;
 
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$primary}' viewBox='0 0 384 512'><path d='M362.7 203.9l-159.1 144c-6.125 5.469-15.31 5.469-21.44 0L21.29 203.9C14.73 197.1 14.2 187.9 20.1 181.3C26.38 174.4 36.5 174.5 42.73 180.1L192 314.5l149.3-134.4c6.594-5.877 16.69-5.361 22.62 1.188C369.8 187.9 369.3 197.1 362.7 203.9z'/></svg>") !default;
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$primary}' viewBox='0 0 384 512'><path d='M362.7 203.9l-159.1 144c-6.125 5.469-15.31 5.469-21.44 0L21.29 203.9C14.73 197.1 14.2 187.9 20.1 181.3C26.38 174.4 36.5 174.5 42.73 180.1L192 314.5l149.3-134.4c6.594-5.877 16.69-5.361 22.62 1.188C369.8 187.9 369.3 197.1 362.7 203.9z'/></svg>") !default;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$primary}' viewBox='0 0 384 512'><path d='M267.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-160 160c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L233.4 256 84.7 107.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l160 160z'/></svg>") !default;
+$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' fill='#{$primary}' viewBox='0 0 384 512'><path d='M267.3 244.7c6.2 6.2 6.2 16.4 0 22.6l-160 160c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6L233.4 256 84.7 107.3c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0l160 160z'/></svg>") !default;
 // scss-docs-end accordion-variables
 
 // Tooltips
 
 // scss-docs-start tooltip-variables
 $tooltip-font-size:                 $font-size-sm !default;
+$tooltip-font-weight:               $font-weight-medium !default;
 $tooltip-max-width:                 200px !default;
 $tooltip-color:                     $white !default;
 $tooltip-bg:                        $blue-900 !default;
@@ -1751,21 +1789,60 @@ $badge-text-info:                   $bg-info-text !default;
 $badge-text-success:                $bg-success-text !default;
 $badge-text-warning:                $bg-warning-text !default;
 $badge-text-danger:                 $bg-danger-text !default;
+
+$badge-xs-padding-y:                   .42857em !default;
+$badge-xs-padding-x:                   .65em !default;
+$badge-xs-padding:                     $badge-xs-padding-y $badge-xs-padding-x;
+$badge-xs-font-size:                   $font-size-2xs;
+$badge-xs-height:                      22px;
+$badge-xs-line-height:                 calc(22px - 8px);
+
+$badge-sm-padding-y:                   .42857em !default;
+$badge-sm-padding-x:                   .65em !default;
+$badge-sm-padding:                     $badge-sm-padding-y $badge-sm-padding-x;
+$badge-sm-font-size:                   $font-size-xs;
+$badge-sm-height:                      26px;
+$badge-sm-line-height:                 calc(26px - 8px);
+
+$badge-md-padding-y:                   .42857em !default;
+$badge-md-padding-x:                   .65em !default;
+$badge-md-padding:                     $badge-md-padding-y $badge-md-padding-x;
+$badge-md-font-size:                   $font-size-xs;
+$badge-md-height:                      28px;
+$badge-md-line-height:                 calc(28px - 8px);
+
+$badge-lg-padding-y:                   .42857em !default;
+$badge-lg-padding-x:                   .65em !default;
+$badge-lg-padding:                     $badge-lg-padding-y $badge-lg-padding-x;
+$badge-lg-font-size:                   $font-size-sm;
+$badge-lg-height:                      32px;
+$badge-lg-line-height:                 calc(32px - 8px);
+
+$badge-xl-padding-y:                   .42857em !default;
+$badge-xl-padding-x:                   .65em !default;
+$badge-xl-padding:                     $badge-xl-padding-y $badge-xl-padding-x;
+$badge-xl-font-size:                   $font-size-md;
+$badge-xl-height:                      34px;
+$badge-xl-line-height:                 calc(34px - 8px);
 // scss-docs-end badge-variables
 
 // Avatars
 
 $avatar-font-size:      $font-size-xs !default;
-$avatar-font-weight:    $font-weight-semibold !default;
+$avatar-font-weight:    $font-weight-medium !default;
 $avatar-border:         1px solid $white !default;
 $avatar-border-radius:  $border-rounded !default;
 $avatar-bg:             $grey-100 !default;
+$avatar-border:         1px solid $white;
 
 $avatar-size-x:         $spacer * 3.75 !default;
 $avatar-size-y:         $avatar-size-x !default;
+$avatar-2xs-size-x:     $spacer * 2 !default;
+$avatar-2xs-size-y:     $avatar-2xs-size-x !default;
+$avatar-font-size-2xs:  $font-size-3xs !default;
 $avatar-xs-size-x:      $spacer * 2.5 !default;
 $avatar-xs-size-y:      $avatar-xs-size-x !default;
-$avatar-font-size-xs:   $font-size-2xs !default;
+$avatar-font-size-xs:   $font-size-3xs !default;
 $avatar-sm-size-x:      $spacer * 3 !default;
 $avatar-sm-size-y:      $avatar-sm-size-x !default;
 $avatar-font-size-sm:   $font-size-2xs !default;
@@ -1778,11 +1855,13 @@ $avatar-font-size-xl:   $font-size-lg !default;
 
 $avatar-online-bg:            $green-400 !default;
 $avatar-unavailable-bg:       $orange-400 !default;
-$avatar-offline-bg:           $grey-300 !default;
+$avatar-offline-bg:           $grey-400 !default;
 $avatar-notification-bg:      $red-500 !default;
 
 $avatar-status-size-x:        $spacer * 1.25 !default;
 $avatar-status-size-y:        $avatar-status-size-x !default;
+$avatar-status-2xs-size-x:    $spacer !default;
+$avatar-status-2xs-size-y:    $avatar-status-2xs-size-x !default;
 $avatar-status-xs-size-x:     $spacer !default;
 $avatar-status-xs-size-y:     $avatar-status-xs-size-x !default;
 $avatar-status-sm-size-x:     $spacer !default;
@@ -1792,11 +1871,12 @@ $avatar-status-lg-size-y:     $avatar-status-lg-size-x !default;
 $avatar-status-xl-size-x:     $spacer * 1.5 !default;
 $avatar-status-xl-size-y:     $avatar-status-xl-size-x !default;
 
-$avatar-name-font-weight:     $font-weight-base !default;
+$avatar-name-font-weight:     $font-weight-medium !default;
 $avatar-name-margin:          $spacer !default;
-$avatar-name-font-size-base:  $font-size-xs !default;
-$avatar-name-font-size-xs:    $font-size-xs !default;
-$avatar-name-font-size-sm:    $font-size-xs !default;
+$avatar-name-font-size-base:  $font-size-sm !default;
+$avatar-name-font-size-2xs:    $font-size-xs !default;
+$avatar-name-font-size-xs:    $font-size-sm !default;
+$avatar-name-font-size-sm:    $font-size-sm !default;
 $avatar-name-font-size-lg:    $font-size-base !default;
 $avatar-name-font-size-xl:    $font-size-lg !default;
 
@@ -2069,17 +2149,21 @@ $btn-close-bg-focus:         $btn-close-bg-hover;
 // scss-docs-start offcanvas-variables
 $offcanvas-padding-y:               $modal-inner-padding !default;
 $offcanvas-padding-x:               $modal-inner-padding !default;
-$offcanvas-horizontal-width:        640px !default;
+$offcanvas-horizontal-width:        600px !default;
 $offcanvas-vertical-height:         30vh !default;
 $offcanvas-transition-duration:     .3s !default;
 $offcanvas-border-color:            $modal-content-border-color !default;
 $offcanvas-border-width:            $modal-content-border-width !default;
-$offcanvas-title-line-height:       $modal-title-line-height !default;
 $offcanvas-bg-color:                $modal-content-bg !default;
 $offcanvas-color:                   $modal-content-color !default;
 $offcanvas-box-shadow:              $modal-content-box-shadow-xs !default;
 $offcanvas-backdrop-bg:             $modal-backdrop-bg !default;
 $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
+$offcanvas-border-radius:           $border-radius-xl;
+
+$offcanvas-title-line-height:       $modal-title-line-height !default;
+$offcanvas-title-size:              $modal-title-size !default;
+$offcanvas-title-font-weight:       $modal-title-font-weight !default;
 // scss-docs-end offcanvas-variables
 
 // Code
@@ -2244,8 +2328,9 @@ $contact-name-size:           $font-size-lg;
 $contact-name-font-weight:    $font-weight-semibold;
 $contact-name-color:          $body-color;
 
-$chat-bubble-default:                   $grey-100 !default;
-$chat-bubble-agent:                   #EFF2F6 !default;
+$chat-bubble-spacer:                    $spacer * 6;
+$chat-bubble-default:                   $grey-50 !default;
+$chat-bubble-agent:                     $blue-25 !default;
 $chat-bubble-error:                     $red-200 !default;
 $chat-bubble-note:                      #FBF3D2 !default;
 $chat-bubble-default-border:            transparent $chat-bubble-default transparent transparent !default;
@@ -2257,9 +2342,14 @@ $chat-bubble-note-agent-border:         $chat-bubble-note transparent transparen
 $chat-bubble-status-default:            $body-color-secondary;
 $chat-bubble-status-error:              $red-600;
 $chat-bubble-status-success:            $green-600;
+$chat-bubble-agent-border-radius:       0 $border-radius $border-radius $border-radius;
+$chat-bubble-default-border-radius:     $border-radius 0 $border-radius $border-radius;
 
 $channel-select-font-weight: $font-weight-medium;
 $channel-select-font-size: $font-size-base;
+
+$chat-head-hover-bg: $grey-25;
+$chat-head-active-bg: $grey-50;
 
 // REPLY BOX
 
@@ -2267,6 +2357,11 @@ $replybox-icon-font-size: $font-size-base;
 $replybox-icon-color: $body-color;
 $replybox-icon-color-hover: $body-color-secondary;
 $replybox-icon-spacing: $spacer;
+$replybox-bg: $white;
+$replybox-note-bg: $yellow-25;
+$replybox-footer-icon-hover-bg: rgba($black, 0.05);
+$replybox-footer-icon-hover-color: $grey-700;
+$replybox-footer-icon-hover-border: $grey-400;
 
 // // BOTS
 
@@ -2347,3 +2442,67 @@ $date-picker-day-width:             $date-picker-day-height;
 $date-picker-day-line-height:       $date-picker-day-height;
 $date-picker-day-border-radius:     $input-border-radius;
 $date-picker-day-bg:                $grey-200;
+
+// FAB
+
+$fab-icon-size: $icon-display-size-xs;
+$fab-height: 60px;
+$fab-width: $fab-height;
+
+$fab-bg: $btn-primary-bg;
+$fab-color: $btn-primary-color;
+$fab-border: $btn-primary-border;
+$fab-hover-bg: $btn-primary-hover-bg;
+$fab-hover-color: $btn-primary-hover-color;
+$fab-hover-border: $btn-primary-hover-border-color;
+$fab-active-bg: $btn-primary-active-bg;
+$fab-active-color: $btn-primary-active-color;
+$fab-active-border: $btn-primary-active-border;
+$fab-focus-bg: $btn-primary-active-bg;
+$fab-focus-color: $btn-primary-active-color;
+$fab-focus-border: 1px solid $white;
+$fab-focus-box-shadow: $btn-primary-focus-box-shadow;
+
+// CHAT WIDGET
+
+$chat-widget-fab-right: $spacer * 3;
+$chat-widget-fab-bottom: $spacer * 3;
+$chat-widget-container-right: $chat-widget-fab-right;
+$chat-widget-container-bottom: calc($chat-widget-fab-bottom + $fab-height + #{$spacer * 2});
+
+$chat-widget-container-height: calc(100vh - $chat-widget-container-bottom - #{$spacer * 2});
+$chat-widget-container-width: 468px;
+
+$chat-widget-body-bg: $white;
+$chat-widget-body-border-radius: $border-radius-2xl $border-radius-2xl 0 0;
+$chat-widget-body-margin: -$border-radius-2xl 0 0;
+
+$chat-widget-header-agent-header-color: $white;
+
+$chat-widget-header-agent-header-btn-height: $spacer * 3;
+$chat-widget-header-agent-header-btn-width: $chat-widget-header-agent-header-btn-height;
+$chat-widget-header-agent-header-btn-bg: transparent;
+$chat-widget-header-agent-header-btn-hover-bg: rgba($white, 0.1);
+
+$chat-widget-replybox-height: 40px;
+$chat-widget-replybox-focus-box-shadow: $box-shadow-lg;
+$chat-widget-replybox-focus-border: $input-hover-border-color;
+$chat-widget-replybox-hover-border: $chat-widget-replybox-focus-border;
+$chat-widget-replybox-btn-right: $spacer * 2;
+$chat-widget-replybox-btn-color: $grey-300;
+$chat-widget-replybox-btn-hover-color: $blue-500;
+$chat-widget-replybox-btn-focus-color: $chat-widget-replybox-btn-hover-color;
+
+// ACTIVITY FEED
+
+$activity-feed-border: 0.5px dashed $grey-200;
+$activity-feed-icon-height: 24px;
+$activity-feed-icon-width: $activity-feed-icon-height;
+
+// Conversation sentiment analysis
+
+$red-ring: $red-500;
+$orange-ring: $orange-400;
+$green-ring: $green-400;
+$grey-ring: $grey-100;
+$blue-ring: $grey-300;

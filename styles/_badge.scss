@@ -12,11 +12,14 @@
   --#{$prefix}badge-border-radius: #{$badge-border-radius};
   // scss-docs-end badge-css-vars
 
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: var(--#{$prefix}badge-padding-y) var(--#{$prefix}badge-padding-x);
   @include font-size(var(--#{$prefix}badge-font-size));
   font-weight: var(--#{$prefix}badge-font-weight);
   line-height: 1;
+  height: 22px;
+  max-width: 100%;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -26,6 +29,112 @@
   // Empty badges collapse automatically
   &:empty {
     display: none;
+  }
+
+  .btn.badge-close {
+    padding: 0;
+    line-height: 1;
+    height: 16px;
+    width: 16px;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: $border-radius-sm;
+    margin-left: 8px;
+    color: $primary;
+    &:hover {
+      background-color: $btn-outline-danger-hover-bg;
+      color: $btn-outline-danger-hover-color !important;
+    }
+    &:active,
+    &.active {
+      background-color: $btn-outline-danger-active-bg;
+      color: $btn-outline-danger-active-color;
+    }
+    &:focus-visible {
+      background-color: $btn-outline-danger-active-bg;
+      color: $btn-outline-danger-active-color !important;
+      outline: 1px solid $white;
+      outline-offset: -2px;
+      border-color: $btn-outline-danger-active-border;
+    }
+    &:disabled,
+    &.disabled {
+      background-color: $btn-outline-danger-disabled-bg;
+      color: $btn-outline-danger-disabled-color;
+      border-color: $btn-outline-danger-disabled-border;
+    }
+  }
+
+  &.bg-primary {
+    .btn.badge-close {
+      color: $badge-text-primary;
+    }
+  }
+  &.bg-secondary {
+    .btn.badge-close {
+      color: $badge-text-secondary;
+    }
+  }
+  &.bg-info {
+    .btn.badge-close {
+      color: $badge-text-info;
+    }
+  }
+  &.bg-success {
+    .btn.badge-close {
+      color: $badge-text-success;
+    }
+  }
+  &.bg-warning {
+    .btn.badge-close {
+      color: $badge-text-warning;
+    }
+  }
+  &.bg-danger {
+    .btn.badge-close {
+      color: $badge-text-danger;
+      &:hover {
+        background-color: $red-50;
+      }
+    }
+  }
+  &.bg-outline {
+    .btn.badge-close {
+      color: $badge-text-secondary;
+    }
+  }
+
+  .overflow {
+    line-height: $badge-xs-line-height;
+  }
+
+  &.badge-xs {
+    .overflow {
+      line-height: $badge-xs-line-height;
+    }
+  }
+  &.badge-sm {
+    .overflow {
+      line-height: $badge-sm-line-height;
+    }
+  }
+  &.badge-md {
+    .overflow {
+      line-height: $badge-md-line-height;
+    }
+  }
+  &.badge-lg {
+    .overflow {
+      line-height: $badge-lg-line-height;
+    }
+  }
+  &.badge-xl {
+    .overflow {
+      line-height: $badge-xl-line-height;
+    }
   }
 }
 
@@ -64,5 +173,75 @@
     background-color: $bg-outline !important;
     color: $primary;
     border: 1px solid $border-color;
+  }
+
+  .avatar {
+    .avatar-body {
+      height: 16px;
+      width: 16px;
+      box-sizing: border-box;
+      font-size: 7px;
+    }
+  }
+
+  &.badge-xs {
+    padding: $badge-xs-padding;
+    font-size: $badge-xs-font-size;
+    height: 22px;
+    .avatar {
+      .avatar-body {
+        height: 16px;
+        width: 16px;
+        font-size: 7px;
+      }
+    }
+  }
+  &.badge-sm {
+    padding: $badge-sm-padding;
+    font-size: $badge-sm-font-size;
+    height: 26px;
+    .avatar {
+      .avatar-body {
+        height: 18px;
+        width: 18px;
+        font-size: $avatar-font-size-2xs;
+      }
+    }
+  }
+  &.badge-md {
+    padding: $badge-md-padding;
+    font-size: $badge-md-font-size;
+    height: 28px;
+    .avatar {
+      .avatar-body {
+        height: 18px;
+        width: 18px;
+        font-size: $avatar-font-size-2xs;
+      }
+    }
+  }
+  &.badge-lg {
+    padding: $badge-lg-padding;
+    font-size: $badge-lg-font-size;
+    height: 32px;
+    .avatar {
+      .avatar-body {
+        height: 20px;
+        width: 20px;
+        font-size: $avatar-font-size-xs;
+      }
+    }
+  }
+  &.badge-xl {
+    padding: $badge-xl-padding;
+    font-size: $badge-xl-font-size;
+    height: 34px;
+    .avatar {
+      .avatar-body {
+        height: 20px;
+        width: 20px;
+        font-size: $avatar-font-size-xs;
+      }
+    }
   }
 }

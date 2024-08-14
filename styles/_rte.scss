@@ -262,4 +262,31 @@
             }
         }
     }
+
+    .tox-pop {
+        .tox-pop__dialog {
+            border-radius: $border-radius !important;
+            .tox-toolbar {
+                padding: $spacer * 0.5 $spacer !important;
+                .tox-toolbar__group {
+                    padding: 0 !important;
+                    .tox-tbtn {
+                        &:hover {
+                            background-color: $grey-50 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tox-tooltip {
+        .tox-tooltip__body {
+            background-color: $primary;
+            font-family: $font-family-base;
+            font-size: $tooltip-font-size;
+            font-weight: $tooltip-font-weight;
+            padding: $tooltip-padding-y $tooltip-padding-x;
+        }
+    }
 }

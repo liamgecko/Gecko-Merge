@@ -99,8 +99,10 @@
 // React Select
 //
 
-.gecko-react-select {
-  .gecko-react-select__control {
+.gecko-react-select,
+.gecko-react-select-creatable {
+  .gecko-react-select__control,
+  .gecko-react-select-creatable__control {
     border: $react-select-input-border;
     @include transition();
     &:hover {
@@ -108,29 +110,36 @@
       cursor: pointer;
     }
     &.gecko-react-select__control--is-focused,
-    &.gecko-react-select__control--menu-is-open {
+    &.gecko-react-select__control--menu-is-open,
+    &.gecko-react-select-creatable__control--is-focused,
+    &.gecko-react-select-creatable__control--menu-is-open {
       color: $react-select-input-focus-color;
       background-color: $react-select-input-focus-bg;
       border-color: $react-select-input-focus-border;
       outline: 0 !important;
       box-shadow: $react-select-input-focus-box-shadow;
     }
-    .gecko-react-select__value-container {
+    .gecko-react-select__value-container,
+    .gecko-react-select-creatable__value-container {
       padding: $react-select-input-padding;
-      .gecko-react-select__input-container {
+      .gecko-react-select__input-container,
+      .gecko-react-select-creatable__input-container {
         padding: 0;
         margin: 0;
         color: $react-select-color;
       }
-      .gecko-react-select__single-value {
+      .gecko-react-select__single-value,
+      .gecko-react-select-creatable__single-value {
         margin-left: 0;
         color: $react-select-color;
       }
-      .gecko-react-select__placeholder {
+      .gecko-react-select__placeholder,
+      .gecko-react-select-creatable__placeholder {
         @include form-placeholder();
         margin: 0;
       }
-      .gecko-react-select__multi-value {
+      .gecko-react-select__multi-value,
+      .gecko-react-select-creatable__multi-value {
         line-height: 1;
         text-align: center;
         white-space: nowrap;
@@ -140,13 +149,15 @@
         &:first-child {
           margin-left: 0;
         }
-        .gecko-react-select__multi-value__label {
+        .gecko-react-select__multi-value__label,
+        .gecko-react-select-creatable__multi-value__label {
           color: $react-select-badge-color;
           padding: $react-select-badge-padding;
           font-size: $react-select-badge-font-size;
           font-weight: $react-select-badge-font-weight;
         }
-        .gecko-react-select__multi-value__remove {
+        .gecko-react-select__multi-value__remove,
+        .gecko-react-select-creatable__multi-value__remove {
           &:hover {
             background-color: $react-select-badge-remove-bg;
             color: $react-select-badge-remove-color;
@@ -154,34 +165,37 @@
         }
       }
     }
-    .gecko-react-select__indicators {
-      .gecko-react-select__indicator-separator {
+    .gecko-react-select__indicators,
+    .gecko-react-select-creatable__indicators {
+      .gecko-react-select-creatable__indicator-separator {
         background-color: $react-select-indicator-bg;
       }
-      .gecko-react-select__indicator {
+      .gecko-react-select__indicator,
+      .gecko-react-select-creatable__indicator {
         color: $react-select-indicator-color;
       }
-      .gecko-react-select__dropdown-indicator {
+      .gecko-react-select__dropdown-indicator,
+      .gecko-react-select-creatable__dropdown-indicator {
         padding-right: $react-select-indicator-padding-right;
         padding-left: $react-select-indicator-padding-left;
-        svg,
-        i {
-          height: $react-select-indicator-height;
-          width: $react-select-indicator-width;
-          font-size: $react-select-indicator-size;
-        }
+        display: flex;
+        align-items: center;
       }
-      .gecko-react-select__clear-indicator {
+      .gecko-react-select__clear-indicator,
+      .gecko-react-select-creatable__clear-indicator {
         padding-right: $react-select-indicator-padding-right;
       }
     }
   }
-  .gecko-react-select__menu {
+  .gecko-react-select__menu,
+  .gecko-react-select-creatable__menu {
     box-shadow: $react-select-menu-box-shadow;
-    .gecko-react-select__menu-list {
+    .gecko-react-select__menu-list,
+    .gecko-react-select-creatable__menu-list {
       margin: $react-select-menu-margin;
       padding: 0;
-      .gecko-react-select__option {
+      .gecko-react-select__option,
+      .gecko-react-select-creatable__option {
         padding: $react-select-menu-padding;
         font-weight: $react-select-menu-font-weight;
         color: $react-select-menu-color;
@@ -197,9 +211,11 @@
           cursor: default;
         }
       }
-      .gecko-react-select__group {
+      .gecko-react-select__group,
+      .gecko-react-select-creatable__group {
         padding: 0;
-        .gecko-react-select__group-heading {
+        .gecko-react-select__group-heading,
+        .gecko-react-select-creatable__group-heading {
           font-size: $react-select-divider-font-size;
           font-weight: $react-select-divider-font-weight;
           color: $react-select-divider-color;
@@ -208,7 +224,8 @@
           margin: 0;
         }
       }
-      .gecko-react-select-custom-option {
+      .gecko-react-select-custom-option,
+      .gecko-react-select-creatable-custom-option {
         padding: $react-select-custom-padding;
         font-weight: $react-select-custom-font-weight;
         @include transition();
@@ -222,12 +239,14 @@
             color: $react-select-menu-selected-color;
           }
         }
-        .gecko-react-select-custom-option-meta {
+        .gecko-react-select-custom-option-meta,
+        .gecko-react-select-creatable-custom-option-meta {
           font-weight: $react-select-custom-meta-font-weight;
           font-size: $react-select-custom-meta-font-size;
         }
       }
-      .gecko-react-select__menu-notice {
+      .gecko-react-select__menu-notice,
+      .gecko-react-select-creatable__menu-notice {
         text-align: left;
         font-weight: $react-select-notice-font-weight;
         color: $react-select-notice-color;

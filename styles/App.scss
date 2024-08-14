@@ -1,14 +1,12 @@
 @import "mixins/banner";
-@include bsBanner("");
+@include bsBanner(""); 
 
-// @import url(https://fonts.geckoform.com/muli.css);
-@import url(../fonts/satoshi.css);
+@import url(https://fonts.geckoform.com/satoshi.css); 
 
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
 @import "variables";
-@import "variables-dark";
 @import "maps";
 @import "mixins";
 @import "utilities";
@@ -43,12 +41,20 @@
 @import "popover";
 @import "carousel";
 @import "spinners";
-@import "offcanvas";
+@import "drawer";
 @import "placeholders";
 @import "avatar";
 @import "avatar-group";
 @import "list-view";
 @import "rte";
+@import "chat-bubble";
+@import "empty-state";
+@import "dropzone";
+@import "command-window";
+@import "activity-feed";
+@import "chat-head";
+@import "fab";
+@import "reply-box";
 
 // Helpers
 @import "helpers";

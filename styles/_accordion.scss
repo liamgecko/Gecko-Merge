@@ -35,7 +35,6 @@
   align-items: center;
   width: 100%;
   padding: var(--#{$prefix}accordion-btn-padding-y) var(--#{$prefix}accordion-btn-padding-x);
-  @include font-size($font-size-base);
   color: var(--#{$prefix}accordion-btn-color);
   text-align: left; // Reset button style
   font-weight: $accordion-font-weight;
@@ -64,7 +63,7 @@
     content: "";
     background-image: var(--#{$prefix}accordion-btn-icon);
     background-repeat: no-repeat;
-    background-size: var(--#{$prefix}accordion-btn-icon-width);
+    background-size: 14px;
     @include transition(var(--#{$prefix}accordion-btn-icon-transition));
   }
 
@@ -81,15 +80,17 @@
 
 .accordion-header {
   margin-bottom: 0;
+  font-size: $font-size-md;
 }
 
 .accordion-item {
   color: var(--#{$prefix}accordion-color);
   background-color: var(--#{$prefix}accordion-bg);
-  border-bottom: 1px solid var(--#{$prefix}accordion-border-color);
+  border: 1px solid var(--#{$prefix}accordion-border-color);
+  border-radius: var(--#{$prefix}accordion-border-radius);
 
   &:not(:first-of-type) {
-    border-top: 0;
+    margin-top: $spacer;
   }
 
   // Only set a border-radius on the last item if the accordion is collapsed
@@ -97,9 +98,34 @@
 }
 
 .accordion-body {
-  padding: 0 var(--#{$prefix}accordion-body-padding-x) var(--#{$prefix}accordion-body-padding-y) ;
+  padding: var(--#{$prefix}accordion-body-padding-x) var(--#{$prefix}accordion-body-padding-y);
+  border-top: 1px solid var(--#{$prefix}accordion-border-color);
 }
 
+.accordion-menu {
+  .accordion-item {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid var(--#{$prefix}accordion-border-color);
+    border-radius: 0;
+    margin-top: 0;
+    .accordion-header {
+      height: 46px;
+      display: flex;
+    }
+    .accordion-button {
+      font-size: $font-size-sm;
+      &::after {
+        background-size: 12px;
+      }
+    }
+    .accordion-body {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+}
 
 // Flush accordion items
 //

@@ -74,7 +74,6 @@
 .progress-ring-container {
   opacity: 1;
   transition: opacity .5s ease-in; 
-  width: 58px;
   circle {
     transition: stroke-dashoffset .35s;
     transform: rotate(-90deg);

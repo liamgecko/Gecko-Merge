@@ -17,6 +17,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-feature-settings: $font-feature-setting;
 }
 
 
@@ -47,13 +48,12 @@
 
 // scss-docs-start reboot-body-rules
 html {
-  font-size: 93.75%;
+  font-size: 87.5%;
 }
 body {
   margin: 0; // 1
   font-family: var(--#{$prefix}body-font-family);
   font-size: 14px;
-  font-size: 1rem;
   font-weight: var(--#{$prefix}body-font-weight);
   line-height: var(--#{$prefix}body-line-height);
   color: var(--#{$prefix}body-color);
@@ -252,6 +252,7 @@ a {
   color: var(--#{$prefix}link-color);
   text-decoration: $link-decoration;
   @include transition();
+  cursor: pointer;
 
   &:hover {
     color: var(--#{$prefix}link-hover-color);
@@ -293,7 +294,9 @@ pre {
   margin-bottom: 1rem; // 2
   overflow: auto; // 3
   @include font-size($code-font-size);
-  color: $pre-color;
+  border-radius: 4px;
+  padding: 16px !important;
+  background-color: #F0F2F4 !important;
 
   // Account for some code outputs that place code tags in pre tags
   code {
