@@ -414,21 +414,9 @@
 }
 
 .chat-filters {
-    .chat-filters-nav {
-        @media only screen and (min-width: 1281px) {
-            display: block;
-        }
-        @media only screen and (max-width: 1280px) {
-            display: none;
-        }
-    }
-    .chat-filters-dropdown {
-        @media only screen and (min-width: 1281px) {
-            display: none;
-        }
-        @media only screen and (max-width: 1280px) {
-            display: flex;
-        }
+    .chat-filters-custom {
+        border-left: 1px solid #E2E8F0;
+        padding-left: 16px;
     }
 }
 
