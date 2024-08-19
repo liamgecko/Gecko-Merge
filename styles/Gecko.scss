@@ -176,9 +176,6 @@
     }
 
     .contact-sidebar {
-        &.hidden {
-            transform: translateX(100%);
-        }
         .contact-container {
             overflow: auto;
             height: calc(100% - 60px);
@@ -474,31 +471,6 @@
             }
         }
     }
-}
-
-.chat-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
-}
-
-.chat-head-sidebar {
-    flex: 1;
-}
-
-.conversation-view {
-    flex: 2;
-}
-
-.contact-sidebar {
-    flex: 1;
-}
-
-.contact-sidebar.hidden {
-    flex: 0;
-    transform: translateX(100%); 
-    min-width: 0 !important;
 }
 
 .dropdown-item {
