@@ -940,7 +940,7 @@
                                         </div>
                                     </div>
 
-                                    <button class="btn btn-naked-primary btn-sm btn-icon" type="button" aria-expanded="false">
+                                    <button class="btn btn-naked-primary btn-sm btn-icon btn-expand" type="button" aria-expanded="false">
                                         <i class="far fa-arrow-up-right-and-arrow-down-left-from-center"></i>
                                     </button>
 
@@ -1026,7 +1026,7 @@
 
                                 </div>
 
-                                <div class="contact-owner mt-4">
+                                <!-- <div class="contact-owner mt-4">
 
                                     <div class="dropdown">
                                         <div class="avatar avatar-xs d-flex" type="button" data-bs-toggle="dropdown">
@@ -1096,7 +1096,7 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> -->
 
                             </div>
 
@@ -1279,7 +1279,7 @@
                                             Labels <div class="badge bg-info ms-2">4</div>
                                         </button>
                                     </h4>
-                                    <div id="contact-tags" class="accordion-collapse collapse">
+                                    <div id="contact-tags" class="accordion-collapse collapse show">
                                         <div class="accordion-body px-4 pt-0 fs-3">
                                             <div>
                                                 <span class="badge badge-md bg-outline d-inline-flex align-items-center me-2 mb-2 fs-3 p-2 mw-100v fw-normal">
@@ -1310,7 +1310,7 @@
                                 <div class="accordion-item">
                                     <h4 class="accordion-header">
                                         <button class=" accordion-button collapsed px-4 py-3 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#contact-notes" aria-expanded="false" aria-controls="contact-notes">
-                                            Notes <div class="badge bg-info ms-2">1</div>
+                                            Contact notes <div class="badge bg-info ms-2">1</div>
                                         </button>
                                     </h4>
                                     <div id="contact-notes" class="accordion-collapse collapse">
@@ -1327,7 +1327,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+                                <!-- <div class="accordion-item">
                                     <h4 class="accordion-header">
                                         <button class=" accordion-button collapsed px-4 py-3 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#contact-forms" aria-expanded="false" aria-controls="contact-forms">
                                             Forms
@@ -1338,7 +1338,7 @@
                                             <p>Liam hasn't submitted any forms.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="accordion-item">
                                     <h4 class="accordion-header">
                                         <button class=" accordion-button collapsed px-4 py-3 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#contact-events" aria-expanded="false" aria-controls="contact-events">
@@ -1372,7 +1372,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+                                <!-- <div class="accordion-item">
                                     <h4 class="accordion-header">
                                         <button class=" accordion-button collapsed px-4 py-3 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#contact-campaigns" aria-expanded="false" aria-controls="contact-campaigns">
                                             Campaigns
@@ -1383,7 +1383,7 @@
                                             <p>Liam is not part of any campaigns.</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="accordion-item">
                                     <h4 class="accordion-header">
                                         <button class=" accordion-button collapsed px-4 py-3 fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#contact-system" aria-expanded="false" aria-controls="contact-system">
@@ -1576,7 +1576,7 @@
 
         document.addEventListener('click', function(event) {
             // Check if the clicked element is the button
-            if (event.target.closest('.reply-box-container .btn')) {
+            if (event.target.closest('.reply-box-container .btn-expand')) {
                 const replyBoxContainer = event.target.closest('.reply-box-container');
                 if (replyBoxContainer) {
                     replyBoxContainer.classList.toggle('expanded');
