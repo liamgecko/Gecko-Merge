@@ -15,9 +15,100 @@
 
     <div class="app-wrapper conversation-wrapper">
 
+        <div class="engage-top-bar bg-blue-900">
+
+            <img src="img/gecko-icon.svg" alt="Gecko Chat">
+
+            <div>
+
+                <div class="dropdown">
+                    <div class="avatar justify-content-center dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown">
+                        <div class="avatar-body avatar-online">
+                            <img src="img/avatar-ly.png" alt="Liam Young">
+                            <span class="avatar-indicator d-block position-absolute rounded-circle"></span>
+                        </div>
+                        <div class="avatar-name text-white">Liam Young</div>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                        <a class="dropdown-item" href="#">Set status as <strong>unavailable</strong></a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Switch to dark mode</a>
+                        <a class="dropdown-item" href="#">Agent settings</a>
+                        <a class="dropdown-item" href="#">Security preferences</a>
+                        <a class="dropdown-item" href="#">My accounts</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Service status</a>
+                        <a class="dropdown-item" href="#">Gecko academy</a>
+                        <a class="dropdown-item" href="#">Contact support</a>
+                        <a class="dropdown-item" href="#">Product changes</a>
+                        <a class="dropdown-item" href="#">Suggest a feature</a>
+                        <hr class="dropdown-divider">
+                        <a class="delete dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
         <!-- ======================== MENU ======================== -->
+         
+        <div class="engage-menu bg-white border-end d-flex flex-column flex-shrink-0">
+
+            <ul class="app-menu flex-column mb-auto text-center list-unstyled mt-2">
+                <li class="d-flex justify-content-center">
+                    <a href="events.html" title="Events" data-bs-toggle="tooltip" data-bs-title="Home" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-home-alt"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="forms.html" title="Forms" data-bs-toggle="tooltip" data-bs-title="Contacts" data-bs-custom-class="tooltip-menu" class=" d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-address-book"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="conversations.html" title="Conversations" data-bs-toggle="tooltip" data-bs-title="Responses" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none active"><i class="fa-regular fa-inbox"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="bots.html" title="Bots & AI" data-bs-toggle="tooltip" data-bs-title="Messages" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-envelope"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="broadcasts.html" title="Broadcasts" data-bs-toggle="tooltip" data-bs-title="Calls" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-headset"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="calls.html" title="Calls" data-bs-toggle="tooltip" data-bs-title="Conversations" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-message-lines"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="landing-pages.html" title="Landing pages" data-bs-toggle="tooltip" data-bs-title="Organisations" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-building"></i></a>
+                </li>
+                <li class="d-flex justify-content-center border-top">
+                    <a href="contacts.html" title="Contacts" data-bs-toggle="tooltip" data-bs-title="Dashboards" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-chart-line"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="stats.html" title="Data & reporting" data-bs-toggle="tooltip" data-bs-title="Settings" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-cog"></i></a>
+                </li>
+                <li class="d-flex justify-content-center border-bottom">
+                    <a href="events.html" title="Events" data-bs-toggle="tooltip" data-bs-title="Download apps" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-download"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="forms.html" title="Forms" data-bs-toggle="tooltip" data-bs-title="Events" data-bs-custom-class="tooltip-menu" class=" d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-calendars"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="conversations.html" title="Conversations" data-bs-toggle="tooltip" data-bs-title="Forms" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none active"><i class="fa-regular fa-clipboard-list-check"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="bots.html" title="Bots & AI" data-bs-toggle="tooltip" data-bs-title="Broadcasts" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-bullhorn"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="broadcasts.html" title="Broadcasts" data-bs-toggle="tooltip" data-bs-title="Landing pages" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-browser"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="calls.html" title="Calls" data-bs-toggle="tooltip" data-bs-title="Call scripts" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-scroll"></i></a>
+                </li>
+                <li class="d-flex justify-content-center">
+                    <a href="landing-pages.html" title="Landing pages" data-bs-toggle="tooltip" data-bs-title="Call campaigns" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-regular fa-phone-volume"></i></a>
+                </li>
+            </ul>
+
+        </div>
             
-        <div class="app-menu-wrapper bg-blue-900 d-flex flex-column flex-shrink-0">
+        <!-- <div class="app-menu-wrapper bg-blue-900 d-flex flex-column flex-shrink-0">
 
             <div class="app-logo d-flex align-items-center justify-content-center px-0 py-4">
 
@@ -91,7 +182,7 @@
                 </div>
             </div>
 
-        </div>
+        </div> -->
 
         <!-- ======================== APP BODY ======================== -->
 

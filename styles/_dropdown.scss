@@ -193,9 +193,14 @@
     font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
     color: $primary;
-    padding: $dropdown-divider-padding-y $dropdown-divider-padding-x;
+    padding: 0;
     overflow: hidden;
     opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
+}
+
+hr.dropdown-divider {
+    color: $border-color;
+    padding: 0;
 }
 
 // Links, buttons, and more within the dropdown menu
