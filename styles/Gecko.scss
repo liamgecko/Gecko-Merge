@@ -524,13 +524,15 @@
     }
 }
 
-.app-wrapper {
-    height: auto !important;
-    .app-body {
-        padding-left: 56px;
-        margin-top: 60px;
-        .panel {
-            height: calc(100vh - 49px - 60px);
+.old-engage {
+    .app-wrapper {
+        height: auto !important;
+        .app-body {
+            padding-left: 56px;
+            margin-top: 60px;
+            .panel {
+                height: calc(100vh - 49px - 60px);
+            }
         }
     }
 }

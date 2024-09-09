@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" data-gecko-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gecko Engage 2.0</title>
+
+    <link href="css/App.css" rel="stylesheet">
+    <link href="css/Gecko.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/2a69ff47c3.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div class="app-wrapper">
+
+        <!-- ======================== MENU ======================== -->
+            
+        <div class="app-menu-wrapper bg-blue-900 d-flex flex-column flex-shrink-0">
+
+            <div class="app-logo d-flex align-items-center justify-content-center px-0 py-4">
+
+                <img src="img/gecko-icon.svg" alt="Gecko Chat">
+
+            </div>
+
+            <ul class="app-menu flex-column mb-auto text-center list-unstyled mt-2">
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="events.html" title="Events" data-bs-toggle="tooltip" data-bs-title="Events" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-calendars"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="forms.html" title="Forms" data-bs-toggle="tooltip" data-bs-title="Forms" data-bs-custom-class="tooltip-menu" class=" d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-list"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="conversations.html" title="Conversations" data-bs-toggle="tooltip" data-bs-title="Conversations" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-message-lines"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="bots.html" title="Bots & AI" data-bs-toggle="tooltip" data-bs-title="Bots & AI" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-circle-bolt"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="broadcasts.html" title="Broadcasts" data-bs-toggle="tooltip" data-bs-title="Broadcasts" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-bullhorn"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="calls.html" title="Calls" data-bs-toggle="tooltip" data-bs-title="Calls" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-phone-rotary"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="landing-pages.html" title="Landing pages" data-bs-toggle="tooltip" data-bs-title="Landing pages" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-browser"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="contacts.html" title="Contacts" data-bs-toggle="tooltip" data-bs-title="Contacts" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-address-book"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="workflows.html" title="Workflows" data-bs-toggle="tooltip" data-bs-title="Workflows" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none active"><i class="fa-light fa-route"></i></a>
+                </li>
+                <li class="d-flex justify-content-center mb-2">
+                    <a href="stats.html" title="Data & reporting" data-bs-toggle="tooltip" data-bs-title="Data & reporting" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-chart-line"></i></a>
+                </li>
+            </ul>
+
+            <div class="user-menu">
+                <ul class="app-menu flex-column mb-auto text-center list-unstyled">
+                    <li class="d-flex justify-content-center mb-2">
+                        <span class="menu-modal-btn" data-bs-toggle="modal" data-bs-target="#search-modal">
+                            <a title="Search" role="button" data-bs-toggle="tooltip" data-bs-title="Search" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-search"></i></a>
+                        </span>
+                    </li>
+                    <li class="d-flex justify-content-center mb-2">
+                        <a href="settings.html" title="Settings" data-bs-toggle="tooltip" data-bs-title="Settings" data-bs-custom-class="tooltip-menu" class="d-flex justify-content-center align-items-center rounded position-relative text-decoration-none"><i class="fa-light fa-cog"></i></a>
+                    </li>
+                </ul>
+                <div class="dropdown dropend">
+                    <div class="avatar justify-content-center p-4" id="dropdownUser" data-bs-toggle="dropdown">
+                        <div class="avatar-body avatar-online">
+                            <img src="img/avatar-ly.png" alt="Liam Young">
+                        </div>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                        <a class="dropdown-item" href="#">Set status as <strong>unavailable</strong></a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Switch to dark mode</a>
+                        <a class="dropdown-item" href="#">Agent settings</a>
+                        <a class="dropdown-item" href="#">Security preferences</a>
+                        <a class="dropdown-item" href="#">My accounts</a>
+                        <hr class="dropdown-divider">
+                        <a class="dropdown-item" href="#">Service status</a>
+                        <a class="dropdown-item" href="#">Gecko academy</a>
+                        <a class="dropdown-item" href="#">Contact support</a>
+                        <a class="dropdown-item" href="#">Product changes</a>
+                        <a class="dropdown-item" href="#">Suggest a feature</a>
+                        <hr class="dropdown-divider">
+                        <a class="delete dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="app-body" style="margin-top: 0;">
+
+            <div class="app-body-wrapper">
+
+                <div class="app-body-header bg-white border-bottom p-6 pt-4 pb-0">
+
+                    <div class="d-flex justify-content-between align-items-center">
+
+                        <div class="header-details">
+                            <nav aria-label="breadcrumb mb-0">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="far fa-house-blank"></i></a></li>
+                                    <li class="breadcrumb-item"><a href="workflows.html">Workflows</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Create workflow</li>
+                                </ol>
+                            </nav>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="app-body-content p-6 bg-grey-25">
+
+                    <div class="card border">
+
+                        <div class="card-header">
+
+                            <h2>Create new workflow</h2>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <div class="accordion" id="workflow-accordion">
+
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <i class="fas fa-check-circle me-2 text-green-400"></i> Basic information
+                                        </button>
+                                    </h3>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#workflow-accordion">
+                                        <div class="accordion-body">
+                                            <p class="text-secondary mb-6">Give your workflow a name, this will help you manage your workflow internally.</p>
+                                            <div>
+                                                <label for="exampleFormControlInput1" class="form-label">Workflow name <span class="text-red-500">*</span></label>
+                                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Give your workflow an identifiable name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <i class="fas fa-check-circle me-2 text-green-400"></i> Triggers
+                                        </button>
+                                    </h3>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#workflow-accordion">
+                                        <div class="accordion-body">
+                                            <p class="text-secondary mb-6">Select an event that will trigger this workflow to run.</p>
+                                            <div>
+                                                <label for="exampleFormControlInput1" class="form-label d-flex">Trigger <span class="text-red-500">*</span></label>
+                                                <div role="group" class="btn-checkbox-group btn-group">
+                                                    <input class="btn-check" name="radio-check" type="radio" autocomplete="off" id="tbg-check-1" value="1">
+                                                    <label tabindex="-1" for="tbg-check-1" class="btn-radio btn btn-outline-primary">Before the conversation starts</label>
+                                                    <input class="btn-check" name="radio-check" type="radio" autocomplete="off" id="tbg-check-2" value="2">
+                                                    <label tabindex="-1" for="tbg-check-2" class="btn-radio btn btn-outline-primary">When the conversation has started</label>
+                                                    <input class="btn-check" name="radio-check" type="radio" autocomplete="off" id="tbg-check-3" value="3">
+                                                    <label tabindex="-1" for="tbg-check-3" class="btn-radio btn btn-outline-primary">When the conversation closes</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <i class="fas fa-check-circle me-2 text-green-400"></i> Conditions
+                                        </button>
+                                    </h3>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#workflow-accordion">
+                                        <div class="accordion-body">
+                                            <p class="text-secondary mb-6">Select the conditions that must be met in order for the workflow to run.</p>
+                                            <div class="mb-4">
+                                                <label for="exampleFormControlInput1" class="form-label d-flex">Condition type <span class="text-red-500">*</span></label>
+                                                <div role="group" class="btn-checkbox-group btn-group">
+                                                    <input class="btn-check" name="radio-check" type="radio" autocomplete="off" id="tbg-check-4" value="4">
+                                                    <label tabindex="-1" for="tbg-check-4" class="btn-radio btn btn-outline-primary">Always trigger this workflow</label>
+                                                    <input class="btn-check" name="radio-check" type="radio" autocomplete="off" id="tbg-check-5" value="5" checked>
+                                                    <label tabindex="-1" for="tbg-check-5" class="btn-radio btn btn-outline-primary">Only trigger this workflow when conditions are met</label>
+                                                </div>
+                                            </div>
+                                            <div class="condition-builder border rounded p-4">
+                                                <div class="condition-row d-inline-flex align-items-center w-100 mb-4">
+                                                    <div style="width: 76px;">
+                                                        <span class="condition-operator btn btn-naked-primary btn-sm fw-semibold">IF</span>
+                                                    </div>
+                                                    <div class="d-flex flex-fill gap-2">
+                                                        <div class="col">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Select condition type</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col" style="max-width: 142px;">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Equals</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>-</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-icon btn-naked-danger ms-2"><i class="far fa-trash-alt"></i></button>
+                                                </div>
+                                                <div class="condition-row d-inline-flex align-items-center w-100 mb-4">
+                                                    <div style="width: 76px;">
+                                                        <div class="dropdown">
+                                                            <button class="condition-operator btn btn-naked-primary dropdown-toggle btn-sm fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                              AND
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                              <a class="dropdown-item fs-3" href="#">AND</a>
+                                                              <a class="dropdown-item fs-3" href="#">OR</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex flex-fill gap-2">
+                                                        <div class="col">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Select condition type</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col" style="max-width: 142px;">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>Equals</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col">
+                                                            <select class="form-select" aria-label="Default select example">
+                                                                <option selected>-</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn btn-icon btn-naked-danger ms-2"><i class="far fa-trash-alt"></i></button>
+                                                </div>
+                                                <div class="condition-row d-inline-flex w-100">
+                                                    <div style="width: 76px;">
+                                                        <div class="dropdown">
+                                                            <button class="condition-operator btn btn-naked-primary dropdown-toggle btn-sm fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                OR
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item fs-3" href="#">AND</a>
+                                                                <a class="dropdown-item fs-3" href="#">OR</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="condition-group rounded border bg-grey-25 flex-fill p-4">
+                                                        <div class="condition-row d-inline-flex align-items-center w-100 mb-4">
+                                                            <div style="width: 76px;">
+                                                                <span class="condition-operator btn btn-naked-primary btn-sm fw-semibold">IF</span>
+                                                            </div>
+                                                            <div class="d-flex flex-fill gap-2">
+                                                                <div class="col">
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>Select condition type</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col" style="max-width: 142px;">
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>Equals</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <select class="form-select" aria-label="Default select example">
+                                                                        <option selected>-</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn btn-icon btn-naked-danger ms-2"><i class="far fa-trash-alt"></i></button>
+                                                        </div>
+                                                        <div class="dropdown mt-4">
+                                                            <button class="btn btn-naked-primary btn-icon-left btn-sm fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                              <i class="far fa-plus"></i>Add
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                              <a class="dropdown-item" href="#">Condition</a>
+                                                              <a class="dropdown-item" href="#">Condition group</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown mt-4">
+                                                    <button class="btn btn-naked-primary btn-icon-left btn-sm fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                      <i class="far fa-plus"></i>Add
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                      <a class="dropdown-item" href="#">Condition</a>
+                                                      <a class="dropdown-item" href="#">Condition group</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <i class="fas fa-exclamation-circle me-2 text-red-500"></i> Actions
+                                        </button>
+                                    </h3>
+                                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#workflow-accordion">
+                                        <div class="accordion-body">
+                                            <p class="text-secondary mb-6">Choose an action to run when all conditions and triggers are met.</p>
+                                            <div class="dropdown mt-4">
+                                                <button class="btn btn-naked-primary btn-icon-left btn-sm fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                  <i class="far fa-plus"></i>Add
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                  <a class="dropdown-item" href="#">Assign conversation</a>
+                                                  <a class="dropdown-item" href="#">Send message</a>
+                                                  <a class="dropdown-item" href="#">Add a contact note</a>
+                                                  <a class="dropdown-item" href="#">Add a label</a>
+                                                  <a class="dropdown-item" href="#">Set a contact field</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            <i class="far fa-check-circle me-2 text-grey-300"></i> Review
+                                        </button>
+                                    </h3>
+                                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#workflow-accordion">
+                                        <div class="accordion-body py-8">
+                                            <div class="empty-state d-flex flex-column align-items-center position-relative">
+                                                <!-- <div class="empty-state-bg">
+                                                    <img src="img/empty-state.svg">
+                                                </div> -->
+                                                <div class="shadow-md border rounded-4 p-3 mb-4 fs-9 text-center" style="width: 65px;">
+                                                    <i class="far fa-exclamation-circle"></i>
+                                                </div>
+                                                <div class="text-center position-relative">
+                                                    <h2 class="fs-8">It looks like there are issues with your workflow.</h2>
+                                                    <p class="fs-5 text-secondary">Please review the errors below before proceeding.</p>
+                                                </div>
+                                            </div>
+                                            <div class="text-center mt-4">
+                                                <p><i class="far fa-exclamation-circle me-2"></i>You haven’t finished setting up your actions - <a href="" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Review actions</a>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                              </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="search-modal" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="search-input position-relative border-bottom d-flex align-items-center">
+                    <i class="search-icon far fa-search position-absolute text-primary"></i>
+                    <input placeholder="Search Gecko Chat" type="search" class="form-control form-control-lg position-relative p-4">
+                    <button type="button" class="btn-close position-absolute" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-2">
+                    <div class="search-category-filter">
+                        <span class="fs-3 fw-semibold text-secondary mb-2 px-2">Search in</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <div class="search-category-filter-item rounded p-2 d-flex justify-content-between align-items-center">
+                                    <span><i class="category-icon text-center far fa-comments me-1"></i> <span class="fw-medium">Conversations</span></span>
+                                    <span>
+                                        <div class="rounded border p-1 fs-4 fw-semibold text-grey-600 bg-grey-25 border-grey-200">&#8984; A</div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-category-filter-item rounded p-2 d-flex justify-content-between align-items-center">
+                                    <span><i class="category-icon text-center far fa-circle-bolt me-1"></i> <span class="fw-medium">Automation</span></span>
+                                    <span>
+                                        <div class="rounded border p-1 fs-4 fw-semibold text-grey-600 bg-grey-25 border-grey-200">&#8984; B</div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-category-filter-item rounded p-2 d-flex justify-content-between align-items-center">
+                                    <span><i class="category-icon text-center far fa-address-book me-1"></i> <span class="fw-medium">Contacts</span></span>
+                                    <span>
+                                        <div class="rounded border p-1 fs-4 fw-semibold text-grey-600 bg-grey-25 border-grey-200">&#8984; C</div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-category-filter-item rounded p-2 d-flex justify-content-between align-items-center">
+                                    <span><i class="category-icon text-center far fa-users me-1"></i> <span class="fw-medium">Agents and teams</span></span>
+                                    <span>
+                                        <div class="rounded border p-1 fs-4 fw-semibold text-grey-600 bg-grey-25 border-grey-200">&#8984; D</div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-category-filter-item rounded p-2 d-flex justify-content-between align-items-center">
+                                    <span><i class="category-icon text-center far fa-route me-1"></i> <span class="fw-medium">Workflows</span></span>
+                                    <span>
+                                        <div class="rounded border p-1 fs-4 fw-semibold text-grey-600 bg-grey-25 border-grey-200">&#8984; E</div>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search-category-filter-item rounded p-2 d-flex justify-content-between align-items-center">
+                                    <span><i class="category-icon text-center far fa-tags me-1"></i> <span class="fw-medium">Tags</span></span>
+                                    <span>
+                                        <div class="rounded border p-1 fs-4 fw-semibold text-grey-600 bg-grey-25 border-grey-200">&#8984; F</div>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer fs-3 bg-grey-25">
+                    💡 Tip: You can use in: or from: in the search box to focus your search.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script>
+        (function () {
+        'use strict'
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        })()
+    </script>
+
+</body>
+</html>
