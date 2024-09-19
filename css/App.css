@@ -11411,7 +11411,7 @@ hr.dropdown-divider {
 }
 
 .reply-box .reply-box-container.expanded {
-  height: calc(100vh - 140px);
+  height: calc(100vh - 200px);
 }
 
 .reply-box .reply-box-body {

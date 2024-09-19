@@ -6,7 +6,7 @@
         transition: height 0.5s ease-in-out;
         height: 154px;
         &.expanded {
-            height: calc(100vh - 140px);
+            height: calc(100vh - 200px);
         }
     }
     .reply-box-body {
