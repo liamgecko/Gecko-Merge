@@ -193,7 +193,7 @@
     font-size: $font-size-xs;
     font-weight: $font-weight-semibold;
     color: $primary;
-    padding: 0;
+    padding: $spacer $spacer * 2;
     overflow: hidden;
     opacity: 1; // Revisit in v6 to de-dupe styles that conflict with <hr> element
 }

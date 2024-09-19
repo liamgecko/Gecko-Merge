@@ -1514,6 +1514,7 @@ $dropdown-divider-bg:               $dropdown-border-color !default;
 $dropdown-divider-margin-y:         $spacer * .5 !default;
 $dropdown-divider-padding-y:        $dropdown-item-padding-y !default;
 $dropdown-divider-padding-x:        $dropdown-item-padding-x !default;
+$dropdown-divider-padding:          $dropdown-divider-padding-y $dropdown-divider-padding-x !default;
 
 // fusv-disable
 $dropdown-header-padding:           $dropdown-header-padding-y $dropdown-header-padding-x !default; // Deprecated in v5.2.0

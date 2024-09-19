@@ -485,6 +485,23 @@
     }
 }
 
+.chat-filters-nav {
+    button {
+        &.unread {
+            position: relative;
+            &:after {
+                content: "";
+                height: 6px;
+                width: 6px;
+                background: #E11D48;
+                border-radius: 50%;
+                position: absolute;
+                left: 2px;
+            }
+        }
+    }
+}
+
 .engage-menu {
     height: 100vh;
     left: 0;
@@ -503,6 +520,19 @@
     a {
         padding: 12px 0;
         color: #475569;
+        &.unread {
+            position: relative;
+            &:after {
+                content: "";
+                height: 8px;
+                width: 8px;
+                background: #E11D48;
+                border-radius: 50%;
+                position: absolute;
+                left: -4px;
+                top: 8px;
+            }
+        }
     }
 }
 
